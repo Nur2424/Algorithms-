@@ -1,0 +1,69 @@
+Generally, software development involves learning new technologies on a daily basis. 
+You get to learn most of these technologies while using them in one of your projects. However, it is not the case with algorithms.
+
+If you don't know algorithms well, you won't be able to identify if you can optimize the code you are writing right now. 
+You are expected to know them in advance and apply them wherever possible and critical.
+
+We specifically talked about the scalability of algorithms. A software system consists of many such algorithms. 
+Optimizing any one of them leads to a better system. 
+
+However, it's important to note that this is not the only way to 
+make a system scalable. For example, a technique known as distributed computing allows independent parts of a program to run to
+multiple machines together making it even more scalable 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Example 1: Age Group Problem
+
+Problems like finding the people of a certain age group can easily be solved with a little modified version of the binary search algorithm 
+(assuming that the data is sorted).
+
+The naive algorithm which goes through all the persons one by one, and checks if it falls in the given age group is linearly scalable. 
+Whereas, binary search claims itself to be a logarithmically scalable algorithm. 
+This means that if the size of the problem is squared, the time taken to solve it is only doubled.
+
+Suppose, it takes 1 second to find all the people at a certain age for a group of 1000. Then for a group of 1 million people,
+
+  ° the binary search algorithm will take only 2 seconds to solve the problem
+  ° the naive algorithm might take 1 million seconds, which is around 12 days
+
+The same binary search algorithm is used to find the square root of a number.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Example 2: Rubik's Cube Problem
+
+Imagine you are writing a program to find the solution of a Rubik's cube.
+
+This cute looking puzzle has annoyingly 43,252,003,274,489,856,000 positions, and these are just positions! 
+Imagine the number of paths one can take to reach the wrong positions.
+
+Fortunately, the way to solve this problem can be represented by the graph data structure. 
+There is a graph algorithm known as Dijkstra's algorithm which allows you to solve this problem in linear time. 
+Yes, you heard it right. It means that it allows you to reach the solved position in a minimum number of states.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Example 3: DNA Problem
+
+DNA is a molecule that carries genetic information. They are made up of smaller units which are represented by Roman characters A, C, T, and G.
+
+Imagine yourself working in the field of bioinformatics. 
+You are assigned the work of finding out the occurrence of a particular pattern in a DNA strand.
+It is a famous problem in computer science academia. And, the simplest algorithm takes the time proportional to
+
+(number of character in DNA strand) * (number of characters in pattern)
+
+A typical DNA strand has millions of such units. Eh! worry not. KMP algorithm can get this done in time which is proportional to
+
+(number of character in DNA strand) + (number of characters in pattern)
+
+The * operator replaced by + makes a lot of change.
+
+Considering that the pattern was of 100 characters, your algorithm is now 100 times faster. 
+If your pattern was of 1000 characters, the KMP algorithm would be almost 1000 times faster. 
+That is, if you were able to find the occurrence of pattern in 1 second, it will now take you just 1 ms. We can also put this in another way. 
+Instead of matching 1 strand, you can match 1000 strands of similar length at the same time.
+
+And there are infinite such stories...
