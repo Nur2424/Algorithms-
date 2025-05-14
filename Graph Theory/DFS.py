@@ -51,6 +51,27 @@ def dfs(at):
         if not visited[next_node]:
             dfs(next_node)
 
+"""
+Example usage
+
+n = 5
+g = [
+    [1, 2],    # Node 0 is connected to 1 and 2
+    [0, 2],    # Node 1 is connected to 0 and 2
+    [0, 1],    # Node 2 is connected to 0 and 1
+    [4],       # Node 3 is connected to 4
+    [3]        # Node 4 is connected to 3
+]
+
+component_count, component_ids = find_components()
+print("Number of components:", component_count)
+print("Component IDs:", component_ids)
+
+Number of components: 2
+Component IDs: [1, 1, 1, 2, 2]
+
+"""
+
 
 
 
