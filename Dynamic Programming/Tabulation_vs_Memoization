@@ -1,0 +1,38 @@
+----------Tabulation vs Memoization------------
+
+Tabulation and memoization are two techniques used to implement dynamic programming. 
+Both techniques are used when there are overlapping subproblems (the same subproblem is executed multiple times).
+
+Below is an overview of two approaches.
+
+--------------
+Memoization:
+--------------
+
+    ° Top-down approach
+    ° Stores the results of function calls in a table.
+    ° Recursive implementation
+    ° Entries are filled when needed.
+
+--------------
+Tabulation:
+--------------
+
+    ° Bottom-up approach
+    ° Stores the results of subproblems in a table
+    ° Iterative implementation
+    ° Entries are filled in a bottom-up manner from the smallest size to the final size.
+
+# ┌─────────────────────┬──────────────────────────────┬──────────────────────────────┐
+# │      Feature        │        Memoization           │         Tabulation           │
+# ├─────────────────────┼──────────────────────────────┼──────────────────────────────┤
+# │ Approach            │ Top-down (recursive)         │ Bottom-up (iterative)        │
+# │ Storage             │ Uses a cache (dict/list)     │ Uses a table (list/array)    │
+# │ When values stored  │ On demand (when needed)      │ In advance (fills all)       │
+# │ Call stack usage    │ High (recursive calls)       │ Low (no recursion)           │
+# │ Ease of writing     │ Often easier to write first  │ Requires planning order      │
+# │ Speed               │ Can be slower (recursive)    │ Often faster (iterative)     │
+# │ Space efficiency    │ Can use more space (stack +) │ Generally better space usage │
+# │ Debuggability       │ Easier to trace logic        │ Easier to debug performance  │
+# └─────────────────────┴──────────────────────────────┴──────────────────────────────┘
+
