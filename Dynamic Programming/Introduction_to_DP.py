@@ -56,6 +56,48 @@ def fib (n):
     return fib(n - 1) + fib(n - 2)
 
 
+"""
+
+0(2^n) time ❌ ==> fib(50) = 2^50 steps ==> 1,125,899,906,842,624
+
+Why? Because:
+	•	Every call to fib(n) makes two recursive calls: fib(n-1) and fib(n-2).
+	•	This creates a binary tree of recursive calls, and the size of that tree grows exponentially with n.
+
+O(n) space
+
+
+"""
+
+"""
+
+fib(7)
+├── fib(6)
+│   ├── fib(5)
+│   │   ├── fib(4)
+│   │   │   ├── fib(3)
+│   │   │   │   ├── fib(2) → 1
+│   │   │   │   └── fib(1) → 1
+│   │   │   └── fib(2) → 1
+│   │   └── fib(3)
+│   │       ├── fib(2) → 1
+│   │       └── fib(1) → 1
+│   └── fib(4)
+│       ├── fib(3)
+│       │   ├── fib(2) → 1
+│       │   └── fib(1) → 1
+│       └── fib(2) → 1
+└── fib(5)
+    ├── fib(4)
+    │   ├── fib(3)
+    │   │   ├── fib(2) → 1
+    │   │   └── fib(1) → 1
+    │   └── fib(2) → 1
+    └── fib(3)
+        ├── fib(2) → 1
+        └── fib(1) → 1
+
+"""
 
 
 
