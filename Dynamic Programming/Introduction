@@ -60,6 +60,45 @@ In the bottom-up approach, also known as tabulation, we start with the smallest 
     ° We use a dp table where we first fill the solution for base cases and then fill the remaining entries of the table using recursive formula.
     ° We only use recursive formula on table entries and do not make recursive calls.
 
+------------------------------------------
+Advantages of Dynamic Programming (DP)
+------------------------------------------
+
+Dynamic programming has a wide range of advantages, including:
+
+        ° Avoids recomputing the same subproblems multiple times, leading to significant time savings.
+        ° Ensures that the optimal solution is found by considering all possible combinations.
+
+------------------------------------------
+Applications of Dynamic Programming (DP)
+------------------------------------------
+
+Dynamic programming has a wide range of applications, including:
+
+        ° Optimization: Knapsack problem, shortest path problem, maximum subarray problem
+        ° Computer Science: Longest common subsequence, edit distance, string matching
+        ° Operations Research: Inventory management, scheduling, resource allocation
+
+-------------------------------------------------
+Characteristics of Dynamic Programming Algorithm
+-------------------------------------------------
+
+        ° For any problem, if there is a simple recursive solution and a recursion tree has same recursive calls multiple times (or overlapping subproblems), we use DP.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
