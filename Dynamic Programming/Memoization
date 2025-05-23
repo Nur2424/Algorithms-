@@ -1,0 +1,79 @@
+What is Memoization? A Complete Tutorial
+
+In this tutorial, we will dive into memoization, a powerful optimization technique that can drastically
+improve the performance of certain algorithms. Memoization helps by storing the results of expensive function 
+calls and reusing them when the same inputs occur again. This avoids redundant calculations, making your code more efficient.
+
+The term "Memoization" comes from the Latin word "memorandum" (to remember), 
+which is commonly shortened to "memo" in American English, and which means "to transform the results of a function into something to remember".
+
+In computing, memoization is used to speed up computer programs by eliminating the repetitive computation of results, 
+and by avoiding repeated calls to functions that process the same input.
+
+
+-----What is Memoization?----------
+
+Memoization is an optimization technique primarily used to enhance the performance of algorithms 
+by storing the results of expensive function calls and reusing them when the same inputs occur again. 
+The term comes from "memorandum", which refers to a note intended to help with memory.
+Memoization is particularly effective in scenarios involving repeated computations, like recursive algorithms,
+where the same calculations may be performed multiple times.
+
+
+------Why is Memoization used?-------
+
+Memoization is a specific form of caching that is used in dynamic programming. 
+The purpose of caching is to improve the performance of our programs and keep data accessible that can be used later. 
+It basically stores the previously calculated result of the subproblem and reuses the stored result for the same subproblem. 
+This removes the extra effort to calculate again and again for the same problem.  
+
+-----Where to use Memoization?-----
+
+Memoization is useful in situations where previously calculated results can be reused.
+It is particularly effective in recursive problems, especially those involving overlapping subproblems, 
+where the same calculations are repeated multiple times.
+
+
+-------------Example of Memoization: Finding nth Fibonacci Number-----------
+
+The Fibonacci sequence is a classic example of how memoization can optimize recursive algorithms by eliminating redundant computations.
+
+The Fibonacci sequence is defined as:
+Base Case: F(0) = 0 and F(1) = 1
+Recursive Cases: F(n) = F(n-1) + F(n-2)
+
+Using recursion, solving F(n) involves repeatedly breaking the problem into smaller subproblems. 
+However, many of these subproblems are recalculated multiple times, leading to inefficiency.
+For instance, computing F(5) will independently calculate F(3) and F(2) multiple times. 
+By using memoization, we store the results of already computed subproblems in a cache,
+allowing us to reuse them whenever the same subproblem arises again.
+This eliminates redundant calculations and significantly improves efficiency. 
+Please refer to Nth Fibonacci Number for implementation.
+
+Without memoization, the time complexity of finding the nth Fibonacci number using recursion is O(2^n), 
+as the function repeatedly solves overlapping subproblems, creating an exponential number of recursive calls. 
+For instance, F(3) and F(2) are recalculated multiple times when computing F(5), leading to inefficiency. 
+With memoization, the time complexity reduces to O(n) because each Fibonacci number is computed only once and stored for reuse. 
+This eliminates redundant computations and ensures a linear traversalfrom F(0) and F(n), significantly improving performance.
+
+----------Types of Memoization-----------
+
+The implementation of memoization depends on the parameters that change and are responsible for solving the problem. 
+Memoization can be applied in various ways, based on the number of arguments in the recursive function. 
+Below are some common types of memoization:
+
+1D Memoization: Used when the recursive function has one argument whose value changes with every function call.
+2D Memoization: Used when the recursive function has two arguments whose values change with every function call.
+3D Memoization: Used when the recursive function has three arguments whose values change with every function call.
+
+
+----------
+
+
+
+
+
+
+
+
+
