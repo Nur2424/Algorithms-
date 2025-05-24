@@ -1,0 +1,37 @@
+Steps to solve a Dynamic programming problem:
+
+  ° Identify if it is a Dynamic programming problem.
+  ° Decide a state expression with the Least parameters.
+  ° Formulate state and transition relationship.
+  ° Apply tabulation or memorization.
+
+Step 1: How to classify a problem as a Dynamic Programming Problem? 
+
+  ° Typically, all the problems that require maximizing or minimizing certain quantities or counting problems 
+    that say to count the arrangements under certain conditions or certain probability problems can be solved by using Dynamic Programming.
+
+  ° All dynamic programming problems satisfy the overlapping subproblems property and most of the classic
+    Dynamic programming problems also satisfy the optimal substructure property. Once we observe these properties in a given problem be
+    sure that it can be solved using Dynamic Programming.
+
+Step 2: Deciding the state
+
+  Dynamic Programming problems are all about the state and its transition. 
+  This is the most basic step which must be done very carefully because the state transition depends on the choice of state definition you make.
+
+  State:
+        A state can be defined as the set of parameters that can uniquely identify a certain position or standing in the given problem. 
+        This set of parameters should be as small as possible to reduce state space. 
+
+      Example:
+
+      Let's take the classic Knapsack problem, where we need to maximize profit by selecting items within a weight limit. 
+      Here, we define our state using two parameters: index and weight (dp[index][weight]). 
+      Think of it like this: dp[3][10] would tell us "what's the maximum profit we can make by choosing from the first 4 items (index 0 to 3) 
+      when our bag can hold 10 units of weight?" These two parameters (index and weight) work together to uniquely identify each subproblem we need to solve.
+      Just like GPS coordinates need both latitude and longitude to pinpoint a location, 
+      our knapsack solution needs both the item range and remaining capacity to determine the optimal profit at each step.
+      So, our next step will be to find a relation between previous states to reach the current state.
+
+
+
