@@ -1,3 +1,17 @@
+def canSum(targetSum, numbers):
+    if targetSum == 0:
+        return True
+    if targetSum < 0:
+        return False
+
+    for num in numbers:
+        remainder = targetSum - num
+        if canSum(remainder, numbers):
+            return True
+
+    return False
+
+
 """
     ° Here’s a simple recursive version of canSum(targetSum, numbers) without using dynamic programming or memoization:
 
@@ -36,22 +50,7 @@ Calling canSum(50, [1, 2, 5]) without memoization will be incredibly slow, as it
 
 """
 
-def canSum(targetSum, numbers):
-    if targetSum == 0:
-        return True
-    if targetSum < 0:
-        return False
-
-    for num in numbers:
-        remainder = targetSum - num
-        if canSum(remainder, numbers):
-            return True
-
-    return False
-
-
-
-
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def canSum(targetSum, numbers, memo=None):
     if memo is None:
@@ -72,9 +71,6 @@ def canSum(targetSum, numbers, memo=None):
 
     memo[targetSum] = False
     return False
-
-
-
 
 """
 
